@@ -1,0 +1,47 @@
+{
+    "main_courses":{
+        "cs1440":{
+            "name":"Intro to Computer Science 1",
+            "credits":3,
+            "elective":false,
+            "prerequisites":[],
+            "difficulty":1,
+            "course_type":""
+        },
+        "cs2440":{
+            "name":"Intro to Computer Science 2",
+            "credits":3,
+            "elective":false,
+            "prerequisites":["cs1440"],
+            "difficulty":2,
+            "course_type":""
+        }
+    },
+    "math_courses":{
+        "mat1110":{
+            "name":"Calculus 1",
+            "credits":4,
+            "elective":false,
+            "prerequisites":[],
+            "difficulty":3,
+            "course_type":""
+        },
+        "mat1120":{
+            "name":"Calculus 2",
+            "credits":4,
+            "elective":false,
+            "prerequisites":["math1210"],
+            "difficulty":4,
+            "course_type":""
+        },
+        "mat1100":{
+            "name":"Discrete Math",
+            "credits":3,
+            "elective":false,
+            "prerequisites":[],
+            "difficulty":2,
+            "course_type":""
+        }
+    }
+
+}
