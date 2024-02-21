@@ -41,7 +41,24 @@
             "prerequisites":[],
             "difficulty":2,
             "course_type":""
+        },
+        "mat2240":{
+            "name":"Introduction to Linear Algebra",
+            "credits":3,
+            "elective":false,
+            "prerequisites":["math1110"],
+            "difficulty":3,
+            "course_type":""
+        },
+        "stt3850":{
+            "name":"Statistics Data Analysis 1",
+            "credits":4,
+            "elective":false,
+            "prerequisites":["math1110"],
+            "difficulty":2,
+            "course_type":""
         }
+
     }
 
 }
