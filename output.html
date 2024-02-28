@@ -1,18 +1,21 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" type="text/css" href="main.css">
         <link rel="stylesheet" type="text/css" href="output.css">
         <title>Your New Schedule!</title>
     </head>
     <body>
-        <div id="nav">
+        <div class='top'></div>
+        <header>
+            <h1>Create Your New Schedule Here!</h1>
+        </header>
+        <nav>
             <ul>
                 <li><a href="home.html">Home</a></li>
                 <li><a href="input.html">Input</a></li>
                 <li><a href="output.html">Output</a></li>
             </ul>
-        </div>
+        </nav>
 
         <div id="output-unfinished-input" style="display: none;">
             <h1>
@@ -31,17 +34,20 @@
                 SCHEDULE:
             </h1>
 
-            <h2> Course 1 </h2>
-                <p>Credit Hours</p>
-                <p>Difficulty</p>
-                <p>Prerequisites</p>
-                <p>Elective</p>
-
-            <h2> Course 2 </h2>
-                <p>Credit Hours</p>
-                <p>Difficulty</p>
-                <p>Prerequisites</p>
-                <p>Elective</p>
+            <button type="button" class="collapsible"><h2>Course 1:</h2></button>
+            <div class="content">
+                    <p>Credit Hours</p>
+                    <p>Difficulty</p>
+                    <p>Prerequisites</p>
+                    <p>Electives</p>
+            </div>
+            <button type="button" class="collapsible"><h2>Course 2:</h2></button>
+            <div class="content">
+                    <p>Credit Hours</p>
+                    <p>Difficulty</p>
+                    <p>Prerequisites</p>
+                    <p>Electives</p>
+            </div>
         </div>
 
         <div>
@@ -65,5 +71,24 @@
                 <p></p>
         </div>
         </div>
+        <footer> A footer </footer>
+
+        <!--This is for the collapsibles.-->>
+        <script>
+            var coll = document.getElementsByClassName("collapsible");
+            var i;
+            
+            for (i = 0; i < coll.length; i++) {
+              coll[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.display === "block") {
+                  content.style.display = "none";
+                } else {
+                  content.style.display = "block";
+                }
+              });
+            }
+        </script>
     </body>
 </html>

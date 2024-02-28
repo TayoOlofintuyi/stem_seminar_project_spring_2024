@@ -1,3 +1,89 @@
-/* 
-    This css file can be applied to any html
-*/
+body, h1, h2, p, ul, li {
+  margin: 0;
+  padding: 0;
+}
+.top {
+	position: relative;
+	height: 0.5px;
+	background: linear-gradient(141deg, #222222 10%, #eeeeeea6 40%, #FFCC00 110%);
+}
+body {
+  background-color: #222222;
+  font-family:  Georgia, 'Times New Roman', Times, serif;
+}
+
+h2{
+  color:#222222;
+} 
+header {
+  background-color: #eee;
+  color: #222222;
+  padding: 20px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+header h1 {
+  font-size: 45px;
+  font-weight: 300;
+  color:#222222;
+  border-right: 4px solid #000;
+  animation: cursor 1s step-end, typing 5s;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+main {
+  padding: 20px;
+}
+nav {
+  background-color: #222222;
+  color: #222222;
+  padding: 10px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: larger;
+
+}  
+nav ul {
+  list-style-type: none;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 35px;
+}
+
+nav a{
+  text-decoration: underline;
+  text-decoration-color: #FFCC00;
+  color:#eee;
+}
+
+div {
+  background-color: #f8f4f4;
+  padding: 20px;
+  border: 1px solid #222222;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+footer {
+  background-color: #222222;
+  color: #f8f4f4;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 10px;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.2rem;
+}
+@keyframes cursor{
+  0%, 100%{border-color: transparent;}
+  50%{border-color: #000;}
+}
+
+@keyframes typing{
+  0%{ width: 0ch}
+  100%{ width: 19ch;} 
+}
