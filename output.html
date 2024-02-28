@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="output.css">
+        <title>Your New Schedule!</title>
+    </head>
+    <body>
+        <div class='top'></div>
+        <header>
+            <h1>Create Your New Schedule Here!</h1>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="input.html">Input</a></li>
+                <li><a href="output.html">Output</a></li>
+            </ul>
+        </nav>
+
+        <div id="output-unfinished-input" style="display: none;">
+            <h1>
+                You have not finished inputting your information. Please go back to the input page and fill out all the fields.
+            </h1>
+            <p>
+                Your schedule will be displayed here once you have finished inputting your information.
+            </p>
+            <a href="input.html">Input Page</a>
+        </div>
+
+        <div id="output-finished-input"> 
+
+        <div>
+            <h1 class="output-h1" id="schedule">
+                SCHEDULE:
+            </h1>
+
+            <button type="button" class="collapsible"><h2>Course 1:</h2></button>
+            <div class="content">
+                    <p>Credit Hours</p>
+                    <p>Difficulty</p>
+                    <p>Prerequisites</p>
+                    <p>Electives</p>
+            </div>
+            <button type="button" class="collapsible"><h2>Course 2:</h2></button>
+            <div class="content">
+                    <p>Credit Hours</p>
+                    <p>Difficulty</p>
+                    <p>Prerequisites</p>
+                    <p>Electives</p>
+            </div>
+        </div>
+
+        <div>
+            <h1 class="output-h1" id="progress">
+                PROGRESS:
+            </h1>
+            <progress id="prog" max="100" value="70">70%</progress>
+        </div>
+
+        <div>
+            <h1 class="output-h1" id="notes">
+                NOTES:
+            </h1>
+
+                <h2 class="output-h2">Semester Hours</h2>
+                <p></p>
+
+                <h2 class="output-h2">Semester Difficulty</h2>
+                <p></p>
+
+                <h2 class="output-h2"> Catalogue Year </h2>
+                <p></p>
+        </div>
+        </div>
+        <!--This is for the collapsibles.-->>
+        <script>
+            var coll = document.getElementsByClassName("collapsible");
+            var i;
+            
+            for (i = 0; i < coll.length; i++) {
+              coll[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.display === "block") {
+                  content.style.display = "none";
+                } else {
+                  content.style.display = "block";
+                }
+              });
+            }
+        </script>
+        <footer> A footer </footer>
+    </body>
+</html>

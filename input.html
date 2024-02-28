@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+ <html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="input.css">
+        <title>Input your information here.</title>
+    </head>
+    <body>
+        <div class='top'></div>
+        <header>
+            <h1>Course Relief<h1>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="input.html">Input</a></li>
+                <li><a href="output.html">Output</a></li>
+            </ul>
+        </nav>
+        <h1> Please enter your information here.</h1><br>
+            <form>
+            <label> Enter your first and last name.</label><br>
+            <input type="text" id="fname">
+            <input type="text" id="lname"><br>
+
+            <label> Enter your ID.</label><br>
+            <input type="text" id="schoolid"><br>
+
+            <label> Enter completed classes from last semester.</label><br>
+            <label>** Please separate classes with commas**</label><br>
+            <input type="text" id="lstsemclass" multiple size="50"><br>
+
+            <label> Enter your expected graduation semester.</label>
+            <div>
+                <select id="grad-semester">
+                    <option>Fall</option> 
+                    <option>Spring</option>
+                </select>
+            </div><br>
+
+            <label>What is your Catalog year?</label><br>
+            <input type="text" id="catalog-year"><br>
+
+            <label>How many Gen-eds do you have left?</label><br>
+            <label> ** Enter by actual quantity not credits.**</label><br>
+            <input type="text" id="genEds" size="16"><br>
+
+            <label> Pursing Grad-school?</label><br>
+                <select id="Grad-school">
+                    <option> Yes</option>
+                    <option>No</option>
+                </select><br>
+
+                <br><input type="submit" value="Submit form">
+
+            </form>
+            <footer> A footer </footer>
+    </body>
+</html>
