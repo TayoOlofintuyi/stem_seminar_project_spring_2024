@@ -2,6 +2,17 @@
  * Creating the skeleton for Course.js
  */
 
+//  make a constructor for the course
+
+function Course(name, credit_hours, course_type, difficulty) {
+    this.name = name;
+    this.credit_hours = credit_hours;
+    this.course_type = course_type;
+    this.difficulty = difficulty;
+}
+
+
+
 // The main variables
 let credit_hours = 0;
 let pre_req = {

@@ -33,7 +33,38 @@
             <h1 class="output-h1" id="schedule">
                 SCHEDULE:
             </h1>
+            <script>
 
+                temp_course : Course = new Course("temp", 0, "", 0);
+
+                schedule = [temp_course];
+
+                let text = "";
+
+                for (let i = 0; i < schedule.length; i++){
+                    
+                    course : Course = schedule[i];
+                    
+                    text +=  "<button type='button' class='collapsible'><h2>" + course.name + ":</h2></button>";
+                    text +=  "<div class='content'>";
+                    text +=  "<p>Credit Hours: " + course.credit_hours + "</p>";
+                    text +=  "<p>Difficulty: " + course.difficulty + "</p>";
+                    text +=  "<p>Prerequisites: " + course.prerequisites + "</p>";
+                    text +=  "<p>Electives: " + course.electives + "</p>";
+                    text +=  "</div>";
+
+                }
+
+                if (text == ""){
+                    document.getElementById("output-unfinished-input").style.display = "block";
+                    document.getElementById("output-finished-input").style.display = "none";
+                }
+
+                document.getElementById("class_list").innerHTML = "";
+                document.getElementById("class_list").innerHTML = text;
+
+            </script>
+            <div id="class_list">
             <button type="button" class="collapsible"><h2>Course 1:</h2></button>
             <div class="content">
                     <p>Credit Hours</p>
@@ -47,6 +78,7 @@
                     <p>Difficulty</p>
                     <p>Prerequisites</p>
                     <p>Electives</p>
+            </div>
             </div>
         </div>
 
