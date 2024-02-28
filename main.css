@@ -2,7 +2,11 @@ body, h1, h2, p, ul, li {
   margin: 0;
   padding: 0;
 }
-
+.top {
+	position: relative;
+	height: 0.5px;
+	background: linear-gradient(141deg, #222222 10%, #eeeeeea6 40%, #FFCC00 110%);
+}
 body {
   background-color: #222222;
   font-family:  Georgia, 'Times New Roman', Times, serif;
@@ -11,7 +15,6 @@ body {
 h2{
   color:#222222;
 } 
-
 header {
   background-color: #eee;
   color: #222222;
@@ -45,7 +48,7 @@ nav ul {
 
 nav ul li {
   display: inline;
-  margin-right: 20px;
+  margin-right: 35px;
 }
 
 nav a{
@@ -64,11 +67,16 @@ div {
 footer {
   background-color: #222222;
   color: #f8f4f4;
-  text-align: center;
-  padding: 10px;
+  position: absolute;
   bottom: 0;
-  width: 100%;
-  position: relative;
+  left: 0;
+  right: 0;
+  padding: 10px;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.2rem;
 }
 @keyframes cursor{
   0%, 100%{border-color: transparent;}
