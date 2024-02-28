@@ -4,7 +4,7 @@ body, h1, h2, p, ul, li {
 }
 .top {
 	position: relative;
-	height: 0.5px;
+	height: .01px;
 	background: linear-gradient(141deg, #222222 10%, #eeeeeea6 40%, #FFCC00 110%);
 }
 body {
@@ -61,7 +61,7 @@ div {
   background-color: #f8f4f4;
   padding: 20px;
   border: 1px solid #222222;
-  border-radius: 5px;
+  border-radius: 0px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
 footer {
