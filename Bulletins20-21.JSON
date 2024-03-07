@@ -1,64 +1,330 @@
 {
     "main_courses":{
         "cs1440":{
-            "name":"Intro to Computer Science 1",
-            "credits":3,
+            "name":"Computer Science I",
+            "credits":4,
             "elective":false,
             "prerequisites":[],
             "difficulty":1,
-            "course_type":""
+            "course_type":"required",
+            "minimum_grade": "C"
         },
         "cs2440":{
-            "name":"Intro to Computer Science 2",
-            "credits":3,
+            "name":"Computer Science II",
+            "credits": 4,
             "elective":false,
             "prerequisites":["cs1440"],
+            "corequisites": "cs1100",
             "difficulty":2,
-            "course_type":""
+            "course_type":"required",
+            "minimum_grade": "C"
+        },
+        "cs2450":{
+            "name":"Intro to Computer Systems",
+            "credits":3,
+            "elective":false,
+            "prerequisites":["cs2440", "cs1100"],
+            "difficulty": 3.5,
+            "course_type": "required",
+            "minimum_grade": "C-"
+        },
+        "cs2490":{
+            "name":"Intro to Theoretical Computer Science",
+            "credits":3,
+            "elective":false,
+            "prerequisites":["cs1100", "cs2440"],
+            "difficulty": 3,
+            "course_type": "required",
+            "minimum_grade": "C-"
+        },
+        "cs3430":{
+            "name":"Database",
+            "credits":3,
+            "elective":false,
+            "prerequisites":["cs2440"],
+            "difficulty": 2,
+            "course_type": "required"
+        },
+        "cs3460":{
+            "name":"Data Structures",
+            "credits":3,
+            "elective":false,
+            "prerequisites":["cs2440"],
+            "difficulty": 0,
+            "course_type": "required",
+            "minimum_grade": "C-"
+        },
+        "cs3481":{
+            "name":"Computer Systems I",
+            "credits":3,
+            "elective":false,
+            "prerequisites":["cs2450", "cs2490"],
+            "corequisites": "cs3460",
+            "difficulty": 0,
+            "course_type": "required"
+        },
+        "cs3482":{
+            "name":"Computer Systems II",
+            "credits":3,
+            "elective":false,
+            "prerequisites":["cs3481", "cs3460"],
+            "difficulty": 0,
+            "course_type": "required"
+        },
+        "cs3490":{
+            "name":"Programming Languages",
+            "credits":3,
+            "elective":false,
+            "prerequisites":["cs2490", "cs3460"],
+            "difficulty": 0,
+            "course_type": "required"
+        },
+        "cs3667":{
+            "name":"Software Engineering",
+            "credits":3,
+            "elective":false,
+            "prerequisites":["cs2440"],
+            "difficulty": 0,
+            "course_type": "required"
+        },
+        "cs4100":{
+            "name":"Senior Seminar",
+            "credits":3,
+            "elective":false,
+            "prerequisites": ["cs3100", "eng3695"],
+            "difficulty": 0,
+            "course_type": "required"
         }
     },
     "math_courses":{
         "mat1110":{
-            "name":"Calculus 1",
+            "name":"Calculus I",
             "credits":4,
             "elective":false,
-            "prerequisites":[],
+            "prerequisites":["mat1025"],
             "difficulty":3,
-            "course_type":""
+            "course_type":"required",
+            "minimum_grade": "C-"
         },
         "mat1120":{
-            "name":"Calculus 2",
+            "name":"Calculus II",
             "credits":4,
             "elective":false,
-            "prerequisites":["math1210"],
+            "prerequisites":["mat1110"],
             "difficulty":4,
-            "course_type":""
+            "course_type":"required"
         },
-        "mat1100":{
+        "cs1100":{
             "name":"Discrete Math",
             "credits":3,
             "elective":false,
-            "prerequisites":[],
+            "prerequisites":["mat1025"],
             "difficulty":2,
-            "course_type":""
+            "course_type":"required",
+            "minimum_grade": "C"
         },
         "mat2240":{
             "name":"Introduction to Linear Algebra",
             "credits":3,
             "elective":false,
-            "prerequisites":["math1110"],
+            "prerequisites":["mat1110"],
             "difficulty":3,
-            "course_type":""
+            "course_type":"required"
         },
         "stt3850":{
             "name":"Statistics Data Analysis 1",
             "credits":4,
             "elective":false,
-            "prerequisites":["math1110"],
+            "prerequisites":["mat1110"],
             "difficulty":2,
-            "course_type":""
+            "course_type":"required"
         }
 
+    },
+    "computer science electives":{
+        "cs3240":{
+            "name":"Mobile Device Programming",
+            "credits":3,
+            "elective":true,
+            "prerequisites":["cs2440"],
+            "difficulty":0,
+            "course_type":"elective"
+        },
+        "cs3440":{
+            "name":"Client-side Web Programming",
+            "credits":3,
+            "elective":true,
+            "prerequisites":["cs2440"],
+            "difficulty":0,
+            "course_type":"elective"
+        },
+        "cs3463":{
+            "name":"Simulation",
+            "credits":3,
+            "elective":true,
+            "prerequisites":["cs3460", "stt2810"],
+            "difficulty":0,
+            "course_type":"elective"
+        },
+        "cs3500": {
+            "name":"Independent Study in Computer Science",
+            "credits": [1,2,3],
+            "elective":true,
+            "prerequisites":["cs2440"],
+            "difficulty":0,
+            "course_type":"elective"
+        },
+        "cs3515":{
+            "name":"Juniors Honors Seminar",
+            "credits":3,
+            "elective":true,
+            "prerequisites":["cs2450", "cs2490"],
+            "difficulty":0,
+            "course_type":"elective"
+        },
+        "cs3530-3549":{
+            "name":"Selected Topics",
+            "credits":[1,2,3,4],
+            "elective":true,
+            "prerequisites":["cs2450", "cs2490"],
+            "difficulty":0,
+            "course_type":"elective"
+        },
+        "cs3750":{
+            "name":"Applied Neural Networks",
+            "credits":3,
+            "elective":true,
+            "prerequisites":["cs1440"],
+            "difficulty":0,
+            "course_type":"elective"
+        },
+        "cs3760":{
+            "name":"System Administration and Security",
+            "credits":3,
+            "elective":true,
+            "prerequisites":["cs3460"],
+            "difficulty":0,
+            "course_type":"elective"
+        },
+        "cs3770":{
+            "name":"Compuational Cryptography",
+            "credits":3,
+            "elective":true,
+            "prerequisites":["cs3460"],
+            "difficulty":0,
+            "course_type":"elective"
+        },
+        "cs4435":{
+            "name":"Server-side Web Programming",
+            "credits":3,
+            "elective":true,
+            "prerequisites":["cs3430", "cs3449"],
+            "difficulty":0,
+            "course_type":"elective"
+        },
+        "cs4440":{
+            "name":"Artificial Intelligence",
+            "credits":3,
+            "elective":true,
+            "prerequisites":["cs3460"],
+            "difficulty":0,
+            "course_type":"elective"
+        },
+        "cs4450":{
+            "name":"Data Communications and Networking",
+            "credits":3,
+            "elective":true,
+            "prerequisites":["cs3481"],
+            "difficulty":0,
+            "course_type":"elective"
+        },
+        "cs4465":{
+            "name":"Computer Graphics",
+            "credits":3,
+            "elective":true,
+            "prerequisites":["cs3460", "mat2240"],
+            "difficulty":0,
+            "course_type":"elective"
+        },
+        "cs4521":{
+            "name":"Operating Systems",
+            "credits":3,
+            "elective":true,
+            "prerequisites":["cs3482"],
+            "difficulty":0,
+            "course_type":"elective"
+        },
+        "cs4550":{
+            "name":"Theoretical Computer Science",
+            "credits":3,
+            "elective":true,
+            "prerequisites":["cs2490"],
+            "difficulty":0,
+            "course_type":"elective"
+        },
+        "cs4570":{
+            "name":"Human-Computer Interfaces",
+            "credits":3,
+            "elective":true,
+            "prerequisites":["permission of the instructor"],
+            "difficulty":0,
+            "course_type":"elective"
+        },
+        "cs4620":{
+            "name":"Real-time Systems",
+            "credits":4,
+            "elective":true,
+            "prerequisites":["cs3482"],
+            "difficulty":0,
+            "course_type":"elective"
+        },
+        "cs4680":{
+            "name":"Embedded Systems",
+            "credits":3,
+            "elective":true,
+            "prerequisites":["cs3481"],
+            "difficulty":0,
+            "course_type":"elective"
+        },
+        "cs4740":{
+            "name":"Digital Image Processing",
+            "credits":3,
+            "elective":true,
+            "prerequisites":["cs1440", "mat2240"],
+            "difficulty":0,
+            "course_type":"elective"
+        },
+        "cs4755":{
+            "name":"Applied Machine Learning",
+            "credits":3,
+            "elective":true,
+            "prerequisites":["cs3460", "cs3435", "mat2240"],
+            "difficulty":0,
+            "course_type":"elective"
+        },
+        "cs4900":{
+            "name":"Internship",
+            "credits":[1,2,3,4,5,6],
+            "elective":true,
+            "prerequisites":["junior standing", "approval of the departmental internship coordinator"],
+            "difficulty":0,
+            "course_type":"elective"
+        },
+        "mat4310":{
+            "name":"Numerical Methods",
+            "credits":3,
+            "elective":true,
+            "prerequisites":["mat2240", "mat2310"],
+            "difficulty":0,
+            "course_type":"elective"
+        },
+        "mat4990":{
+            "name":"Numerical Linear Algebra",
+            "credits":3,
+            "elective":true,
+            "prerequisites":["mat4310"],
+            "difficulty":0,
+            "course_type":"elective"
+        }    
     }
-
 }
