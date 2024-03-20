@@ -19,7 +19,7 @@ function getCreditHrs(){
 
 function getName() {
     return this.Name;
-}
+
 
 function getCourse_type() {
     return this.course_type;
