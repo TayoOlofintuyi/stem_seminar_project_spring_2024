@@ -1,46 +1,58 @@
 /**
  * Creating the skeleton for Course.js
  */
-
-// The main variables
-let credit_hours = 0;
-let pre_req = {
+class Course
+{// The main variables
+credit_hours = 0;
+pre_req = {
 
 }
-let elective = false;
-let Name = "";
-let difficulty = 0;
-let course_type = "";
+elective = false;
+Name = "";
+difficulty = 0;
+course_type = "";
+
+
+constructor(courseName, creditHours, difficulty, courseType, elective, preReq = {}) {
+this.Name = courseName;
+this.credit_hours = creditHours;
+this.difficulty = difficulty;
+this.course_type = courseType;
+this.elective = elective;
+this.pre_req = preReq;
+}
 
 //basic getters
-function getCreditHrs(){
-    return this.credit_hours;
+getCreditHrs(){
+return this.credit_hours;
 }
 
-function getName() {
-    return this.Name;
-
-
-function getCourse_type() {
-    return this.course_type;
+getName() {
+return this.Name;
 }
-function getDifficulty() {
-     return this.difficulty;
+
+Course_type() {
+return this.course_type;
+}
+getDifficulty() {
+    return this.difficulty;
 }
 
 //basic setters
-function setName(value) {
-    this.Name = value;
+setName(value) {
+this.Name = value;
 }
 
-function setCourseType(value) {
-    this.course_type = value;
+setCourseType(value) {
+this.course_type = value;
 }
 
-function setDifficulty(value) {
-    this.difficulty = value;
+setDifficulty(value) {
+this.difficulty = value;
 }
 
-function setCreditHours(value) {
-    this.credit_hours = value;
+setCreditHours(value) {
+this.credit_hours = value;
+}
+
 }
