@@ -80,7 +80,7 @@
             "name":"Data Structures",
             "credits":3,
             "elective":false,
-            "prerequisites":["CS2440"],
+            "prerequisites":["CS2490"],
             "corequisites": "",
             "difficulty": 3.5,
             "course_type": "required",
@@ -254,7 +254,7 @@
             "course_description": "A study of vectors, matrices and linear transformations, principally in two and three dimensions, including treatments of systems of linear equations, determinants, and eigenvalues."
         },
         "STT3850":{
-            "name":"Statistics Data Analysis 1",
+            "name":"Statistical Data Analysis 1",
             "credits":4,
             "elective":false,
             "prerequisites":[{
@@ -270,6 +270,18 @@
         }
     },
     "computer science electives":{
+        "CS2530-2549": {
+            "name":"Selected Topics",
+            "credits":[1,2,3,4],
+            "elective":true,
+            "prerequisites":[],
+            "corequisites": "",
+            "difficulty":3,
+            "course_type":"elective",
+            "minimum_grade": "",
+            "when_offered": ["On Demand"],
+            "course_description": "Not availiable. Dependent on course. Only one selected topics course at the 2000-level can be used to satisfy CS electives requirements."
+        },
         "CS3240":{
             "name":"Mobile Device Programming",
             "credits":3,
@@ -562,7 +574,10 @@
             "name":"Applied Machine Learning",
             "credits":3,
             "elective":true,
-            "prerequisites":["CS3460", "CS3435", "MAT2240"],
+            "prerequisites":[{
+                "option1": ["CS3435", "MAT2240"],
+                "option2": ["CS3460", "MAT2240"]
+            }],            
             "corequisites": "",
             "difficulty":3,
             "course_type":"elective",

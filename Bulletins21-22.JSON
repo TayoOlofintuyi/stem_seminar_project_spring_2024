@@ -254,7 +254,7 @@
             "course_description": "A study of vectors, matrices and linear transformations, principally in two and three dimensions, including treatments of systems of linear equations, determinants, and eigenvalues."
         },
         "STT3850":{
-            "name":"Statistics Data Analysis 1",
+            "name":"Statistical Data Analysis 1",
             "credits":4,
             "elective":false,
             "prerequisites":[{
@@ -562,7 +562,10 @@
             "name":"Applied Machine Learning",
             "credits":3,
             "elective":true,
-            "prerequisites":["CS3460", "CS3435", "MAT2240"],
+            "prerequisites":[{
+                "option1": ["CS3435", "MAT2240"],
+                "option2": ["CS3460", "MAT2240"]
+            }],
             "corequisites": "",
             "difficulty":3,
             "course_type":"elective",
