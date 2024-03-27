@@ -1,330 +1,644 @@
 {
     "main_courses":{
-        "cs1440":{
+        "CS1440":{
             "name":"Computer Science I",
             "credits":4,
             "elective":false,
-            "prerequisites":[],
+            "prerequisites":[], 
+            "corequisites": "",
             "difficulty":1,
             "course_type":"required",
-            "minimum_grade": "C"
+            "minimum_grade": "C",
+            "when_offered": ["Fall", "Spring"],
+            "course_description": "A first programming course using an object-oriented language. Emphasis is placed on problem-solving and appropriate programming standards. Topics include: classes, objects, data types, expressions, conditional statements, loops, strings, arrays, collections, debugging, inheritance, and polymorphism. Lecture three hours, laboratory two hours. Students with doubts about their mathematics and computing background should consider taking C S 1425 first."
         },
-        "cs2440":{
+        "CS2440":{
             "name":"Computer Science II",
             "credits": 4,
             "elective":false,
-            "prerequisites":["cs1440"],
-            "corequisites": "cs1100",
+            "prerequisites":[{
+                "option1": "CS1440",
+                "option2": "CS2435",
+                "_comment": "You must have taken option1 or option2."
+            }],
+            "corequisites": "CS1100",
             "difficulty":2,
             "course_type":"required",
-            "minimum_grade": "C"
+            "minimum_grade": "C",
+            "when_offered": ["Fall", "Spring"],
+            "course_description": "This course follows C S 1440 - Computer Science I (4). The course introduces students to advanced programming concepts through the development of small to medium sized projects using software component libraries. Topics emphasize conceptual understanding and applications and include inheritance, polymorphism, recursion, interfaces, collections, stream I/O, exceptions, graphical interfaces, and threads. Lecture three hours, laboratory two hours."
         },
-        "cs2450":{
+        "CS2450":{
             "name":"Intro to Computer Systems",
             "credits":3,
             "elective":false,
-            "prerequisites":["cs2440", "cs1100"],
-            "difficulty": 3.5,
+            "prerequisites":["CS2440", "CS1100"],
+            "corequisites": "",
+            "difficulty": 3,
             "course_type": "required",
-            "minimum_grade": "C-"
+            "minimum_grade": "C-",
+            "when_offered": ["Fall", "Spring"],
+            "course_description": "This course includes data representation, digital logic, digital circuits, instruction set architecture, and assembly language programming."
         },
-        "cs2490":{
+        "CS2490":{
             "name":"Intro to Theoretical Computer Science",
             "credits":3,
             "elective":false,
-            "prerequisites":["cs1100", "cs2440"],
-            "difficulty": 3,
+            "prerequisites":["CS1100", "CS2440"],
+            "corequisites": "",
+            "difficulty": 2.5,
             "course_type": "required",
-            "minimum_grade": "C-"
+            "minimum_grade": "C-",
+            "when_offered": ["Fall", "Spring"],
+            "course_description": "This course provides a rigorous but intuitive introduction to computer theory. Topics covered include formal languages, regular expressions, finite automata, grammars, pushdown automata, and Turing machines."
         },
-        "cs3430":{
+        "CS3100": {
+            "name":"Junior Seminar",
+            "credits":3,
+            "elective":false,
+            "prerequisites":["CS2440", "RC2001"],
+            "corequisites": "",
+            "difficulty": 2,
+            "course_type": "WID",
+            "minimum_grade": "",
+            "when_offered": ["On Demand"],
+            "course_description": "Students develop writing and speaking skills in the context of computer science including technical reports, software documentation, user manuals, correspondence, writing for the web, software application content/organization, and resumes. Ethical, legal, social, historical, and global issues provide a context for the assignments."
+        },
+        "CS3430":{
             "name":"Database",
             "credits":3,
             "elective":false,
-            "prerequisites":["cs2440"],
+            "prerequisites":["CS2440"],
+            "corequisites": "",
             "difficulty": 2,
-            "course_type": "required"
+            "course_type": "required",
+            "minimum_grade": "",
+            "when_offered": ["Fall", "Spring"],
+            "course_description": "This course covers the design, organization, representation, and manipulation of databases. Topics include the relational model, data definition, data manipulation, queries (SQL), communication and representation (XML), design concepts, security, and integrity."
         },
-        "cs3460":{
+        "CS3460":{
             "name":"Data Structures",
             "credits":3,
             "elective":false,
-            "prerequisites":["cs2440"],
-            "difficulty": 0,
+            "prerequisites":["CS2490"],
+            "corequisites": "",
+            "difficulty": 3.5,
             "course_type": "required",
-            "minimum_grade": "C-"
+            "minimum_grade": "C-",
+            "when_offered": ["Fall", "Spring"],
+            "course_description": "The use and implementation of various information structures are studied, including arrays, stacks, queues, linked lists, trees and graphs."
         },
-        "cs3481":{
+        "CS3481":{
             "name":"Computer Systems I",
             "credits":3,
             "elective":false,
-            "prerequisites":["cs2450", "cs2490"],
-            "corequisites": "cs3460",
-            "difficulty": 0,
-            "course_type": "required"
+            "prerequisites":["CS2450", "CS2490"],
+            "corequisites": "CS3460",
+            "difficulty": 4,
+            "course_type": "required",
+            "minimum_grade": "",
+            "when_offered": ["Fall", "Spring"],
+            "course_description": "The hardware and software components of computer systems are studied. Included are those aspects of computer systems that are essential to highly skilled programmers: data representation and operations, source code implementation, processor architecture, program optimization, memory hierarchy, linking, exceptional control flow, and virtual memory. Lecture two hours, laboratory three hours."
         },
-        "cs3482":{
+        "CS3482":{
             "name":"Computer Systems II",
             "credits":3,
             "elective":false,
-            "prerequisites":["cs3481", "cs3460"],
-            "difficulty": 0,
-            "course_type": "required"
+            "prerequisites":["CS3481", "CS3460"],
+            "corequisites": "",
+            "difficulty": 4,
+            "course_type": "required",
+            "minimum_grade": "",
+            "when_offered": ["Fall", "Spring"],
+            "course_description": "Continuation of CS 3481. Lecture two hours, laboratory three hours."
         },
-        "cs3490":{
+        "CS3490":{
             "name":"Programming Languages",
             "credits":3,
             "elective":false,
-            "prerequisites":["cs2490", "cs3460"],
-            "difficulty": 0,
-            "course_type": "required"
+            "prerequisites":["CS2490", "CS3460"],
+            "corequisites": "",
+            "difficulty": 3.5,
+            "course_type": "required",
+            "minimum_grade": "",
+            "when_offered": ["Fall", "Spring"],
+            "course_description": "This course covers the theory of programming language design and implementation. Languages representative of object-oriented, functional and logic paradigms are discussed and compared."
         },
-        "cs3667":{
+        "CS3667":{
             "name":"Software Engineering",
             "credits":3,
             "elective":false,
-            "prerequisites":["cs2440"],
-            "difficulty": 0,
-            "course_type": "required"
+            "prerequisites":["CS2440"],
+            "corequisites": "",
+            "difficulty": 2,
+            "course_type": "required",
+            "minimum_grade": "",
+            "when_offered": ["Fall", "Spring"],
+            "course_description": "This course covers the design and implementation of software systems. Topics include requirements analysis, object design, system design, frameworks and patterns, and implementation and testing issues."
         },
-        "cs4100":{
+        "CS4100":{
             "name":"Senior Seminar",
             "credits":3,
             "elective":false,
-            "prerequisites": ["cs3100", "eng3695"],
-            "difficulty": 0,
-            "course_type": "required"
+            "prerequisites": ["CS3100", "ENG3695"],
+            "corequisites": "",
+            "difficulty": 1,
+            "course_type": "required",
+            "minimum_grade": "",
+            "when_offered": ["Fall", "Spring"],
+            "course_description": "A broad, systematic coverage of current ethical issues facing computer scientists. Current and historical cases from both local and global perspectives are examined. Professional development activities are required, such as mock interviews and resume writing."
+        },
+        "ENG3695": {
+            "name":"Techinal Writing for Computer Science",
+            "credits":3,
+            "elective":false,
+            "prerequisites":[
+                {
+                    "course": "RC2001",
+                    "year": "junior"
+                }],
+            "corequisites": "",
+            "difficulty": 2,
+            "course_type": "WID",
+            "minimum_grade": "",
+            "when_offered": ["Fall", "Spring"],
+            "course_description": "Focus on technical writing concepts, usability and accessibility, ethics, research, and career-related materials.  Emphasis on applied genres: digital instructions, technical definitions, terms of use policies, technical reports that cover multiple genres, digital documentation, and career preparation and documentation (resumes, cover letters, job talks specific to the field). Students may not receive credit for both ENG 3700 and ENG 3695."
+        },
+        "CS4800": {
+            "name":"Capstone Project",
+            "credits":3,
+            "elective":false,
+            "prerequisites":[{
+                "year": "senior",
+                "course": ["CS3667", "CS3460"]
+            }],
+            "corequisites": "",
+            "difficulty": 3,
+            "course_type": "CAP",
+            "minimum_grade": "",
+            "when_offered": ["Fall", "Spring"],
+            "course_description": "The senior capstone project provides the student an independent and collaborative software development experience with a significant project. The course introduces aspects of project management, requirements analysis, and the software lifecycle, but will primarily be concerned with the practical integration of core theories, practices, and ethics of the discipline. Writing and speaking communication skills are reinforced."
+        },
+        "CS4510":{
+            "name":"Senior Honors Thesis",
+            "credits":[1,2,3],
+            "elective":false,
+            "prerequisites":[{
+                "_comment": "Grade of B or higher in at least six semester hours of departmental honors courses 2000 or higher."
+            }],
+            "corequisites": "",
+            "difficulty": 2,
+            "course_type": "CAP",
+            "minimum_grade": "",
+            "when_offered": ["Fall", "Spring"],
+            "course_description": "Independent study and research. Hours are 1-3 semester hours per semester for three semester hours total with a preferred format of one semester hour the first semester and two semester hours the second semester of the senior year. Thesis must be directed by a member of the Department of Computer Science faculty and presented both orally and in writing to the department. Enrollment by permission of the Departmental Honors Committee. Course grade will be determined by the thesis advisor and the Departmental Honors Committee."
         }
     },
     "math_courses":{
-        "mat1110":{
-            "name":"Calculus I",
-            "credits":4,
-            "elective":false,
-            "prerequisites":["mat1025"],
-            "difficulty":3,
-            "course_type":"required",
-            "minimum_grade": "C-"
-        },
-        "mat1120":{
-            "name":"Calculus II",
-            "credits":4,
-            "elective":false,
-            "prerequisites":["mat1110"],
-            "difficulty":4,
-            "course_type":"required"
-        },
-        "cs1100":{
+        "CS1100":{
             "name":"Discrete Math",
             "credits":3,
             "elective":false,
-            "prerequisites":["mat1025"],
+            "prerequisites":[{
+                "course": "MAT1025",
+                "_comment": "higher or satisfactory Calculus Readiness Test score."
+            }],
+            "corequisites": "",
             "difficulty":2,
             "course_type":"required",
-            "minimum_grade": "C"
+            "minimum_grade": "C",
+            "when_offered": ["Fall", "Spring"],
+            "course_description": "A study of discrete mathematics as it applies to computer science. Concepts covered include number systems, sets, logic, Boolean algebra, digital circuits, combinatorics, relations, functions, vectors, matrices, graphs, and induction proofs."
         },
-        "mat2240":{
+        "MAT1110":{
+            "name":"Calculus I",
+            "credits":4,
+            "elective":false,
+            "prerequisites":[{
+                "course": "MAT1025",
+                "_comment": "Demonstrated Readiness for College-level Math."
+                
+            }],
+            "corequisites": "",
+            "difficulty":3,
+            "course_type":"required",
+            "minimum_grade": "C-",
+            "when_offered": ["Fall", "Spring"],
+            "course_description": "A study of limits, continuity, differentiation, applications of the derivative, the differential, the definite integral, the fundamental theorem, and applications of the definite integral."
+        },
+        "MAT1120":{
+            "name":"Calculus II",
+            "credits":4,
+            "elective":false,
+            "prerequisites":[{
+                "course": "MAT1110",
+                "_comment": "Demonstrated Readiness for College-level Math."
+            }],
+            "corequisites": "",
+            "difficulty":3.5,
+            "course_type":"required",
+            "minimum_grade": "",
+            "when_offered": ["Fall", "Spring"],
+            "course_description": "A study of the logarithmic and exponential functions, circular functions and their inverses, techniques of integration, improper integrals, infinite series, Taylor polynomial and power series."
+        },
+        "MAT2240":{
             "name":"Introduction to Linear Algebra",
             "credits":3,
             "elective":false,
-            "prerequisites":["mat1110"],
-            "difficulty":3,
-            "course_type":"required"
+            "prerequisites":["MAT1120"],
+            "corequisites": "",
+            "difficulty":2,
+            "course_type":"required",
+            "minimum_grade": "",
+            "when_offered": ["Fall", "Spring"],
+            "course_description": "A study of vectors, matrices and linear transformations, principally in two and three dimensions, including treatments of systems of linear equations, determinants, and eigenvalues."
         },
-        "stt3850":{
-            "name":"Statistics Data Analysis 1",
+        "STT3850":{
+            "name":"Statistical Data Analysis 1",
             "credits":4,
             "elective":false,
-            "prerequisites":["mat1110"],
+            "prerequisites":[{
+                "course": "MAT1110",
+                "_comment": "Demonstrated Readiness for College-level Math."
+            }],
+            "corequisites": "",
             "difficulty":2,
-            "course_type":"required"
+            "course_type":"required",
+            "minimum_grade": "",
+            "when_offered": ["Fall", "Spring"],
+            "course_description": "This course provides an overview of modern statistical data analysis. Programming with data, including simulations and bootstrapping, will be an integral part of the course. Techniques for parsing univariate and multivariate data sets will be examined. Coverage of probability, random variables, standard probability distributions and statistical sampling distributions will be sufficient to prepare the student for statistical inference. Inferential topics will include parameter estimation, hypothesis testing for proportions, means and medians, goodness of fit tests, and tests for independence. Standard and computationally intensive regression techniques will also be covered."
         }
-
     },
     "computer science electives":{
-        "cs3240":{
-            "name":"Mobile Device Programming",
-            "credits":3,
-            "elective":true,
-            "prerequisites":["cs2440"],
-            "difficulty":0,
-            "course_type":"elective"
-        },
-        "cs3440":{
-            "name":"Client-side Web Programming",
-            "credits":3,
-            "elective":true,
-            "prerequisites":["cs2440"],
-            "difficulty":0,
-            "course_type":"elective"
-        },
-        "cs3463":{
-            "name":"Simulation",
-            "credits":3,
-            "elective":true,
-            "prerequisites":["cs3460", "stt2810"],
-            "difficulty":0,
-            "course_type":"elective"
-        },
-        "cs3500": {
-            "name":"Independent Study in Computer Science",
-            "credits": [1,2,3],
-            "elective":true,
-            "prerequisites":["cs2440"],
-            "difficulty":0,
-            "course_type":"elective"
-        },
-        "cs3515":{
-            "name":"Juniors Honors Seminar",
-            "credits":3,
-            "elective":true,
-            "prerequisites":["cs2450", "cs2490"],
-            "difficulty":0,
-            "course_type":"elective"
-        },
-        "cs3530-3549":{
+        "CS2530-2549": {
             "name":"Selected Topics",
             "credits":[1,2,3,4],
             "elective":true,
-            "prerequisites":["cs2450", "cs2490"],
-            "difficulty":0,
-            "course_type":"elective"
+            "prerequisites":[],
+            "corequisites": "",
+            "difficulty":3,
+            "course_type":"elective",
+            "minimum_grade": "",
+            "when_offered": ["On Demand"],
+            "course_description": "Not availiable. Dependent on course. Only one selected topics course at the 2000-level can be used to satisfy CS electives requirements."
         },
-        "cs3750":{
+        "CS3240":{
+            "name":"Mobile Device Programming",
+            "credits":3,
+            "elective":true,
+            "prerequisites":["CS2440"],
+            "corequisites": "",
+            "difficulty":3,
+            "course_type":"elective",
+            "minimum_grade": "",
+            "when_offered": ["Fall even-numbered years"],
+            "dual-listed": [{
+                "is_dual_listed": false
+            }],
+            "course_description": "Hands-on, experiential exposure to developing applications for modern mobile platforms (for example, Android or iOS). Topics include platform framework, process life cycle, fundamental user interface components and layouts, databases and content providers, services, widgets, testing, and debugging. Modern development tools are used. Students work individually on prepared projects and in small teams to build a custom project."
+        },
+        "CS3440":{
+            "name":"Client-side Web Programming",
+            "credits":3,
+            "elective":true,
+            "prerequisites":["CS2440"],
+            "corequisites": "",
+            "difficulty":3,
+            "course_type":"elective",
+            "minimum_grade": "",
+            "when_offered": ["Fall"],
+            "dual-listed": [{
+                "is_dual_listed": false
+            }],
+            "course_description": "This course covers client-side graphical user interface programming using current internet technologies including browser scripting languages, GUI presentation, asynchronous server communication, event handling, and XML processing."
+        },
+        "CS3463":{
+            "name":"Simulation",
+            "credits":3,
+            "elective":true,
+            "prerequisites":["CS3460", "STT2810"],
+            "corequisites": "",
+            "difficulty":3,
+            "course_type":"elective",
+            "minimum_grade": "",
+            "when_offered": ["On Demand"],
+            "dual-listed": [{
+                "is_dual_listed": false
+            }],
+            "course_description": "Digital simulation of discrete systems. Simulation design. Statistical analysis and interpretation of simulation output. Simulation of computer and physical systems. Simulation languages."
+        },
+        "CS3500": {
+            "name":"Independent Study in Computer Science",
+            "credits": [1,2,3],
+            "elective":true,
+            "prerequisites":[],
+            "corequisites": "",
+            "difficulty":3,
+            "course_type":"elective",
+            "minimum_grade": "",
+            "when_offered": ["On Demand"],
+            "dual-listed": [{
+                "is_dual_listed": false
+            }],
+            "course_description": "This course helps the student advance, through study under the direction of a faculty member, in the area(s) of special interest in computer science. It may be taken only after a minor in computer science is completed."
+        },
+        "CS3515":{
+            "name":"Juniors Honors Seminar",
+            "credits":3,
+            "elective":true,
+            "prerequisites":["CS2450", "CS2490"],
+            "corequisites": "",
+            "difficulty":3,
+            "course_type":"elective",
+            "minimum_grade": "",
+            "when_offered": ["Fall"],
+            "dual-listed": [{
+                "is_dual_listed": false
+            }],
+            "course_description": "Selected topics in computer science. Enrollment by permission of the departmental honors committee. May be repeated for credit when content is not duplicated. Only three of those hours may count toward major requirements."
+        },
+        "CS3530-3549":{
+            "name":"Selected Topics",
+            "credits":[1,2,3,4],
+            "elective":true,
+            "prerequisites":[],
+            "corequisites": "",
+            "difficulty":3,
+            "course_type":"elective",
+            "minimum_grade": "",
+            "when_offered": ["On Demand"],
+            "course_description": "Not availiable. Dependent on course"
+        },
+        "CS3750":{
             "name":"Applied Neural Networks",
             "credits":3,
             "elective":true,
-            "prerequisites":["cs1440"],
-            "difficulty":0,
-            "course_type":"elective"
+            "prerequisites":["CS1440", "MAT2240"],
+            "corequisites": "",
+            "difficulty":3,
+            "course_type":"elective",
+            "minimum_grade": "",
+            "when_offered": ["On Demand"],
+            "dual-listed": [{
+                "is_dual_listed": false
+            }],
+            "course_description": "This project-oriented course provides an opportunity for students to learn and apply neural networks techniques to solve a variety of problems from different disciplines, applying such techniques in pattern recognition, time series prediction, data mining, and optimization problems. Focus is on some applications of artificial neural networks in the real world."
         },
-        "cs3760":{
+        "CS3760":{
             "name":"System Administration and Security",
             "credits":3,
             "elective":true,
-            "prerequisites":["cs3460"],
-            "difficulty":0,
-            "course_type":"elective"
+            "prerequisites":["CS3460", "Unix experience recommmended"],
+            "corequisites": "",
+            "difficulty":3,
+            "course_type":"elective",
+            "minimum_grade": "",
+            "when_offered": ["On Demand"],
+            "dual-listed": [{
+                "is_dual_listed": false
+            }],
+            "course_description": "Addresses local and global security issues with computers using different operating systems in a networked environment. Assignments allow student teams to experience a variety of administration responsibilities including installation, operation, and management."
         },
-        "cs3770":{
+        "CS3770":{
             "name":"Compuational Cryptography",
             "credits":3,
             "elective":true,
-            "prerequisites":["cs3460"],
-            "difficulty":0,
-            "course_type":"elective"
+            "prerequisites":["CS3460"],
+            "corequisites": "",
+            "difficulty":3,
+            "course_type":"elective",
+            "minimum_grade": "",
+            "when_offered": ["Spring"],
+            "dual-listed": [{
+                "is_dual_listed": false
+            }],
+            "course_description": "This course explores the theory and implementation of modern cryptographic systems and their application to network security. Topics include: symmetric ciphers, encryption standards, public key encryption, key management, cryptoanalysis, and network security. Programming projects involve the implementation of cryptographic systems."
         },
-        "cs4435":{
+        "CS4435":{
             "name":"Server-side Web Programming",
             "credits":3,
             "elective":true,
-            "prerequisites":["cs3430", "cs3449"],
-            "difficulty":0,
-            "course_type":"elective"
+            "prerequisites":["CS3430", "CS3440"],
+            "corequisites": "",
+            "difficulty":3,
+            "course_type":"elective",
+            "minimum_grade": "",
+            "when_offered": ["Spring"],
+            "dual-listed": [{
+                "is_dual_listed": false
+            }],
+            "course_description": "This course introduces the technologies for implementing secure, high performance, and sophisticated web sites. Topics may include: installation and configuration of a web server, client/server web applications with database backends, web development frameworks, web services, web data formats, and content management systems."
         },
-        "cs4440":{
+        "CS4440":{
             "name":"Artificial Intelligence",
             "credits":3,
             "elective":true,
-            "prerequisites":["cs3460"],
-            "difficulty":0,
-            "course_type":"elective"
+            "prerequisites":["CS3460"],
+            "corequisites": "",
+            "difficulty":3,
+            "course_type":"elective",
+            "minimum_grade": "",
+            "when_offered": ["Spring"],
+            "dual-listed": [{
+                "is_dual_listed": false
+            }],
+            "course_description": "This course covers various topics in artificial intelligence. Topics may also include knowledge representation and manipulation, heuristic programming, expert systems, robotics, machine learning, or natural language processing."
         },
-        "cs4450":{
+        "CS4450":{
             "name":"Data Communications and Networking",
             "credits":3,
             "elective":true,
-            "prerequisites":["cs3481"],
-            "difficulty":0,
-            "course_type":"elective"
+            "prerequisites":["CS3481"],
+            "corequisites": "",
+            "difficulty":3,
+            "course_type":"elective",
+            "minimum_grade": "",
+            "when_offered": ["Fall odd-numbered years"],
+            "dual-listed": [{
+                "is_dual_listed": false
+            }],
+            "course_description": "Introduction to data transmission concepts and techniques; channel characteristics; encoding methods; line control and error detection/correction protocols; circuit, message, and packet switching; layered network architectures and protocols; addressing, routing and flow control strategies; access methods; performance criteria and tradeoffs."
         },
-        "cs4465":{
+        "CS4465":{
             "name":"Computer Graphics",
             "credits":3,
             "elective":true,
-            "prerequisites":["cs3460", "mat2240"],
-            "difficulty":0,
-            "course_type":"elective"
+            "prerequisites":["CS3460", "MAT2240"],
+            "corequisites": "",
+            "difficulty":3,
+            "course_type":"elective",
+            "minimum_grade": "",
+            "when_offered": ["Spring even-numbered years"],
+            "dual-listed": [{
+                "is_dual_listed": false
+            }],
+            "course_description": "Fundamental concepts of computer graphics. Topics include hardware and software systems, scan conversion of graphics primitives, color and color perception, modeling of curves and surfaces, clipping, antialiasing, model-view and projection transformations, light and shading, and hidden surface removal."
         },
-        "cs4521":{
+        "CS4521":{
             "name":"Operating Systems",
             "credits":3,
             "elective":true,
-            "prerequisites":["cs3482"],
-            "difficulty":0,
-            "course_type":"elective"
+            "prerequisites":["CS3482"],
+            "corequisites": "",
+            "difficulty":3,
+            "course_type":"elective",
+            "minimum_grade": "",
+            "when_offered": ["Spring"],
+            "dual-listed": [{
+                "is_dual_listed": true,
+                "_comment": "[Dual-listed with CS 5521.] Dual-listed courses require senior standing; juniors may enroll with permission of the department."
+            }],
+            "course_description": "An in-depth study of the design and implementation of operating systems including process management, memory management, file systems, and input/output.  Lecture three hours, laboratory three hours."
         },
-        "cs4550":{
+        "CS4550":{
             "name":"Theoretical Computer Science",
             "credits":3,
             "elective":true,
-            "prerequisites":["cs2490"],
-            "difficulty":0,
-            "course_type":"elective"
+            "prerequisites":["CS2490"],
+            "corequisites": "",
+            "difficulty":3,
+            "course_type":"elective",
+            "minimum_grade": "",
+            "when_offered": ["Spring even-numbered years"],
+            "dual-listed": [{
+                "is_dual_listed": true,
+                "_comment": "[Dual-listed with CS 5550.] Dual-listed courses require senior standing; juniors may enroll with permission of the department."
+            }],
+            "course_description": "A rigorous treatment of theoretical aspects of computer science, including formal definition of the notion of an algorithm, abstract machines, and formal grammars."
         },
-        "cs4570":{
+        "CS4570":{
             "name":"Human-Computer Interfaces",
             "credits":3,
             "elective":true,
             "prerequisites":["permission of the instructor"],
-            "difficulty":0,
-            "course_type":"elective"
+            "corequisites": "",
+            "difficulty":3,
+            "course_type":"elective",
+            "minimum_grade": "",
+            "when_offered": ["Spring even-numbered years"],
+            "dual-listed": [{
+                "is_dual_listed": true,
+                "_comment": "[Dual-listed with CS 5569.] Dual-listed courses require senior standing; juniors may enroll with permission of the department."
+            }],
+            "course_description": "This course covers topics from psychology and computer science related to the design and evaluation of human-computer interfaces (HCI). Topics include: understanding the user audience, HCI architectures, design issues related to various interface components, measuring HCI usability, incorporating HCI design into system development, and social issues."
         },
-        "cs4620":{
+        "CS4620":{
             "name":"Real-time Systems",
             "credits":4,
             "elective":true,
-            "prerequisites":["cs3482"],
-            "difficulty":0,
-            "course_type":"elective"
+            "prerequisites":["CS3482"],
+            "corequisites": "",
+            "difficulty":3,
+            "course_type":"elective",
+            "minimum_grade": "",
+            "when_offered": ["Spring odd-numbered years"],
+            "dual-listed": [{
+                "is_dual_listed": true,
+                "_comment": "[Dual-listed with CS 5620.] Dual-listed courses require senior standing; juniors may enroll with permission of the department."
+            }],
+            "course_description": "Real-time hardware and software. Analog and digital data acquisition and reduction. Real-time algorithms and data structures. Advanced programming concepts including double buffering, interrupts, signal handlers, processes and threads, inter-process communication, synchronization, and the operating system kernel. Lecture three hours, laboratory three hours."
         },
-        "cs4680":{
+        "CS4680":{
             "name":"Embedded Systems",
             "credits":3,
             "elective":true,
-            "prerequisites":["cs3481"],
-            "difficulty":0,
-            "course_type":"elective"
+            "prerequisites":["CS3481"],
+            "corequisites": "",
+            "difficulty":3,
+            "course_type":"elective",
+            "minimum_grade": "",
+            "when_offered": ["Spring"],
+            "dual-listed": [{
+                "is_dual_listed": true,
+                "_comment": "[Dual-listed with C S 5680.] Dual-listed courses require senior standing; juniors may enroll with permission of the department."
+            }],
+            "course_description": "An in-depth study of the characteristics, design, and implementation of embedded systems with an emphasis on those aspects affecting the development of high quality software.  Topics include: embedded system characteristics; basic electronics principles; microcontroller architecture; device drivers and interfacing (digital I/O, interrupts, timers, A/D converters, serial communication, basic sensors); and software architecture and development.  Classes consist of both lecture and project development activities. Lecture two hours, lab three hours."
         },
-        "cs4740":{
+        "CS4740":{
             "name":"Digital Image Processing",
             "credits":3,
             "elective":true,
-            "prerequisites":["cs1440", "mat2240"],
-            "difficulty":0,
-            "course_type":"elective"
+            "prerequisites":["CS1440", "MAT2240"],
+            "corequisites": "",
+            "difficulty":3,
+            "course_type":"elective",
+            "minimum_grade": "",
+            "when_offered": ["On Demand"],
+            "dual-listed": [{
+                "is_dual_listed": true,
+                "_comment": "[Dual-listed with CS 5740.] Dual-listed courses require senior standing; juniors may enroll with permission of the department."
+            }],
+            "course_description": "This course provides an opportunity for students to learn digital image processing techniques. Students apply these techniques to images from different fields of science, engineering, and medicine. The course covers image acquisition and display, properties of the human visual system, sampling and quantization, color image representations, image enhancement, image transformations, image compression, and image restoration."
         },
-        "cs4755":{
+        "CS4755":{
             "name":"Applied Machine Learning",
             "credits":3,
             "elective":true,
-            "prerequisites":["cs3460", "cs3435", "mat2240"],
-            "difficulty":0,
-            "course_type":"elective"
+            "prerequisites":[{
+                "option1": ["CS3435", "MAT2240"],
+                "option2": ["CS3460", "MAT2240"]
+            }],            
+            "corequisites": "",
+            "difficulty":3,
+            "course_type":"elective",
+            "minimum_grade": "",
+            "when_offered": ["Fall"],
+            "dual-listed": [{
+                "is_dual_listed": false
+            }],
+            "course_description": "Machine Learning is the process of teaching a computer what to do by providing a model for learning and many examples but without explicit instructions.  This course introduces algorithms and processes for machine learning, including topics such as feature selection, parameter tuning, model selection, and performance estimation, as well as algorithms for classification, regression, and clustering."
         },
-        "cs4900":{
+        "CS4900":{
             "name":"Internship",
             "credits":[1,2,3,4,5,6],
             "elective":true,
-            "prerequisites":["junior standing", "approval of the departmental internship coordinator"],
-            "difficulty":0,
-            "course_type":"elective"
+            "prerequisites":[{
+                "year": "junior",
+                "_comment": "Ensure you have spoken with the departmental internship coordinator to obtain approval."
+            }],
+            "corequisites": "",
+            "difficulty":3,
+            "course_type":"elective",
+            "minimum_grade": "",
+            "when_offered": ["On Demand"],
+            "dual-listed": [{
+                "is_dual_listed": false
+            }],
+            "course_description": "Independent, supervised work in computing for an approved agency, business, or organization. May be taken for a maximum of six semester hours credit, but only three of those hours will count toward major requirements. Graded on an S/U basis."
         },
-        "mat4310":{
+        "MAT4310":{
             "name":"Numerical Methods",
             "credits":3,
             "elective":true,
-            "prerequisites":["mat2240", "mat2310"],
-            "difficulty":0,
-            "course_type":"elective"
+            "prerequisites":[{
+                "course": ["MAT2240","MAT2310"],
+                "recommmended": "MAT2130 or MAT3130 recommmended"
+            }],
+            "corequisites": "",
+            "difficulty":3,
+            "course_type":"elective",
+            "minimum_grade": "",
+            "when_offered": ["Spring"],
+            "dual-listed": [{
+                "is_dual_listed": false
+            }],
+            "course_description": "Theoretical development and implementation of classical numerical methods. Topics covered include computer arithmetic, interpolation, and approximation. Numerical algorithms investigated may include root finding, interpolation, linear system solutions, derivative and integral estimation, and differential equation solutions. Knowledge of calculus, linear algebra, and programming will be assumed. "
         },
-        "mat4990":{
+        "MAT4990":{
             "name":"Numerical Linear Algebra",
             "credits":3,
             "elective":true,
-            "prerequisites":["mat4310"],
-            "difficulty":0,
-            "course_type":"elective"
+            "prerequisites":["MAT4310"],
+            "corequisites": "",
+            "difficulty":3,
+            "course_type":"elective",
+            "minimum_grade": "",
+            "when_offered": ["On Demand"],
+            "dual-listed": [{
+                "is_dual_listed": true,
+                "_comment": "[Dual-listed with MAT 5390.] Dual-listed courses require senior standing; juniors may enroll with permission of the department."
+            }],
+            "course_description": "Methods for solving systems of linear equations with an emphasis on large, sparse systems. LU factorization including storage schemes, graph theory, ordering algorithms, and block factorization. Iterative methods including Jacobi, SOR, and conjugate gradient. Eigenvalue methods including power method, QR factorization, and Lanczos methods. Parallel matrix computations."
         }    
     }
 }
