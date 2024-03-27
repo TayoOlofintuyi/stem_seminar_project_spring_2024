@@ -25,10 +25,16 @@
             <label> Enter your ID.</label><br>
             <input type="text" id="schoolid"><br>
 
-            <label> Enter completed classes from last semester.</label><br>
+            <label>What is your Catalog year?</label><br>
+            <input type="text" className="catalog" id="catalog-year"><br>
+                <!-- <select>
+                    <datalist id="bulletin"></datalist>
+                </select> -->
+
+            <br><label> Enter completed classes from last semester.</label><br>
             <label>** Please separate classes with commas**</label><br>
             <input type="text" id="lstsemclass" multiple size="50"><br>
-
+            
             <label> Enter your expected graduation semester.</label>
             <div>
                 <select id="grad-semester">
@@ -36,9 +42,6 @@
                     <option>Spring</option>
                 </select>
             </div><br>
-
-            <label>What is your Catalog year?</label><br>
-            <input type="text" id="catalog-year"><br>
 
             <label>How many Gen-eds do you have left?</label><br>
             <label> ** Enter by actual quantity not credits.**</label><br>
@@ -53,6 +56,19 @@
                 <br><input type="submit" value="Submit form">
 
             </form>
+
+            <script>
+                // Formatting the input box 
+                // var catalogYear = document.getElementsByClassName('catalog');
+                // console.log(catalogYear);
+                // var bulletin = "";
+
+                // if (catalogYear != null) {
+                   
+                // }
+            
+
+            </script>
             <footer> A footer </footer>
     </body>
 </html>
