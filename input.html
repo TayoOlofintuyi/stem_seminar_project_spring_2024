@@ -27,9 +27,9 @@
 
             <label>What is your Catalog year?</label><br>
             <input type="text" className="catalog" id="catalog-year"><br>
-                <select>
+                <!-- <select>
                     <datalist id="bulletin"></datalist>
-                </select>
+                </select> -->
 
             <br><label> Enter completed classes from last semester.</label><br>
             <label>** Please separate classes with commas**</label><br>
@@ -59,34 +59,14 @@
 
             <script>
                 // Formatting the input box 
-                var catalogYear = document.getElementsByClassName('catalog');
-                console.log(catalogYear);
-                var bulletin = "";
+                // var catalogYear = document.getElementsByClassName('catalog');
+                // console.log(catalogYear);
+                // var bulletin = "";
 
-                if (catalogYear != null) {
-                    switch(catalogYear) {
-                        case "2020":
-                            bulletin = "../StemSeminar/stem_seminar_project_spring_2024/Bulletins20-21.JSON";
-                            break;
-                        case "2021":
-                            bulletin = "../StemSeminar/stem_seminar_project_spring_2024/Bulletins21-22.JSON";
-                            break;
-                        case "2022":
-                            bulletin = "../StemSeminar/stem_seminar_project_spring_2024/Bulletins22-23.JSON";
-                            break;
-                        case "2023":
-                            bulletin = "../StemSeminar/stem_seminar_project_spring_2024/Bulletins23-24.JSON";
-                            break;
-                        default:
-                            bulletin = "../StemSeminar/stem_seminar_project_spring_2024/Bulletins23-24.JSON";
-                    }
-                    bulletin;
-                }
-                //console.log(catalogYear);
-                //console.log(bulletin);
-                // if we can match a catalog year to a bulletin, 
-                //load that bulletin into the input select option.
-                // I can use the fetch method
+                // if (catalogYear != null) {
+                   
+                // }
+            
 
             </script>
             <footer> A footer </footer>
